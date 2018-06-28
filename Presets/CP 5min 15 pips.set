@@ -1,0 +1,125 @@
+gen=----General inputs----
+TradingTimeFrame=5
+Lot=0.01
+RiskPercent=0.0
+LotsPerDollopOfCash=0.0
+SizeOfDollop=1000.0
+UseBalance=false
+UseEquity=true
+StopTrading=false
+TradeLong=true
+TradeShort=true
+TakeProfitPips=0
+StopLossPips=200
+MagicNumber=20
+TradeComment=Candle Power
+IsGlobalPrimeOrECNCriminal=false
+MaxSlippagePips=5.0
+PostTradeAttemptWaitSeconds=10
+sep2c=================================================================
+mpp=---- Minimum pips in between same-pair trades ----
+MinDistanceBetweenTradesPips=15
+sep1=================================================================
+hgic========= HGI choices ========
+hgi=-- HGI Inputs --
+HgiTimeFrame=5
+CloseOnLargeArrows=false
+CloseOnBlueWavy=false
+OnlyCloseWinningTrades=true
+sep2=================================================================
+btp=---- Hedged Basket take profit inputs ----
+HedgedBasketCashTakeProfit=2
+sepb=================================================================
+off=---- Offsetting ----
+UseOffsetting=true
+AllowComplexSingleSidedOffsets=true
+MinOpenTradesToStartOffset=4
+sep2a=================================================================
+ubp=---- Unbalanced positions inputs ----
+PositionIsUnbalancedAt=5
+rec=-- Offsetting for unbalanced positions --
+UseOffsettingForBalanceRecovery=true
+AllowComplexSingleSidedOffsetsRecovery=true
+MinTradesToStartUnbalancedOffset=6
+nco=-- Nuclear option closure --
+UseInstantClosure=false
+UseMarginLevelClosure=false
+ClosureMarginLevel=500
+sep1a=================================================================
+sfs=----SafetyFeature----
+MinMinutesBetweenTradeOpenClose=0
+MinMinutesBetweenTrades=0
+sep3=================================================================
+hts=----Stealth stop loss and take profit inputs----
+PipsHiddenFromCriminal=0
+sep7=================================================================
+trh=----Trading hours----
+tr1=tradingHours is a comma delimited list
+tr1a=of start and stop times.
+tr2=Prefix start with '+', stop with '-'
+tr2a=Use 24H format, local time.
+tr3=Example: '+07.00,-10.30,+14.15,-16.00'
+tr3a=Do not leave spaces
+tr4=Blank input means 24 hour trading.
+tradingHours=
+sep1de=================================================================
+fssmt=---- Inputs applied to individual days ----
+FridayStopTradingHour=14
+FridayCloseAllHour=20
+SaturdayStopTradingHour=24
+SaturdayCloseAllHour=24
+MaxAllowableCashLoss=-20
+TradeSundayCandle=false
+MondayStartHour=8
+sep7b=================================================================
+roll=---- Rollover time ----
+DisableEaDuringRollover=true
+ro1=Use 24H format, SERVER time.
+ro2=Example: '23.55'
+RollOverStarts=23.55
+RollOverEnds=00.15
+sep10=================================================================
+amc=----Available Margin checks----
+sco=Scoobs
+UseScoobsMarginCheck=false
+fk=ForexKiwi
+UseForexKiwi=false
+FkMinimumMarginPercent=1500
+sep11=================================================================
+asi=----Average spread inputs----
+TicksToCount=5
+MultiplierToDetectStopHunt=10.0
+sep13=================================================================
+tmm=----Trade management module----
+BE=Break even settings
+BreakEven=true
+BreakEvenTargetPips=20
+BreakEvenTargetProfit=2
+PartCloseEnabled=false
+PartClosePercent=50.0
+sep14=================================================================
+JSL=Jumping stop loss settings
+JumpingStop=true
+JumpingStopTargetPips=2
+AddBEP=true
+sep15=================================================================
+cts=----Candlestick jumping stop----
+UseCandlestickTrailingStop=false
+CstTimeFrame=0
+CstTrailCandles=1
+TrailMustLockInProfit=true
+sep16=================================================================
+TSL=Trailing stop loss settings
+TrailingStop=false
+TrailingStopTargetPips=20
+se52=================================================================
+oad=----Odds and ends----
+ChartRefreshDelaySeconds=3
+DisplayGapSize=30
+DisplayAsText=true
+KeepTextOnTop=true
+DisplayX=100
+DisplayY=0
+fontSise=12
+fontName=Arial
+colour=65535

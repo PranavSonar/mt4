@@ -1,0 +1,32 @@
+s_Server==== Server settings ===
+Channel=news
+HeartbeatPeriodSeconds=1
+s_OrdersToInclude==== Orders to include ===
+IncludeSymbols=
+IncludeMagicNumbers=1000
+IncludeOrderComments=
+IncludePendingOrders=true
+s_Lotsize==== Lot sizing and pricing ===
+UseFixedLotSize=0.0
+LotSizeMultiplier=1.0
+SymbolMultipliers=
+BroadcastAllOrdersAtMarket=false
+HideSLandTP=false
+AddPipsToSL=0.0
+AddPipsToTP=0.0
+WaitForProfitPips=0.0
+WaitForSeconds=0
+s_Broadcast==== Broadcast settings ===
+RetryAttempts=2
+FuturesSymbol=#
+s_Warnings==== Alerts and warnings ===
+UserDescription=
+BackgroundColour=9109504
+LabelColour=16777215
+SendWarningsByEmail=true
+WarningEmailSubjectLine=Signal Broadcaster warning
+s_Advanced==== Advanced settings ===
+TradeWatchFrequencyMS=100
+SendOrderComments=true
+AllowExistingOrders=false
+CustomPipSizes=

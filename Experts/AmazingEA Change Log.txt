@@ -1,0 +1,316 @@
+AmazingEA Change Log
+(For details regarding changes, see ReadMe Instructions textfile)
+
+Please check the following Thread on Forex Factory for News and Updates:-
+http://www.forexfactory.com/showthread.php?t=597450
+
+21 June 2017
+Version 9.10 Modified by Alan Prothero
+Changed History Checker to start looking at NewsTime-SecBPO
+
+15 May 2017
+Version 9.09 Modified by Alan Prothero
+Changed type of Input Parameters from 'extern' to 'input' due to an update to MetaEditor
+Changed some filenames in Experts-Files
+Changed Magic Number Generation to be less random - now uses Newstime like old AmazingEA
+-this is so that if you restart the EA it will continue to manage existing trades.
+
+27 February 2017
+Version 9.08 Modified by Alan Prothero
+Slight Update to calculation for name of Calendar.xml file
+Recheck Next Event Time and Forex Factory Calendar every 60 minutes (except during STWAN)
+Update Display to show when the Next Calendar check will take place
+
+18 February 2017
+Version 9.07 Modified by Alan Prothero
+Fixed Bug affecting FF Calendar download and File Save introduced in 9.06
+Fixed issue where EA not handling Blank Date ('0000-00-00 00:00:00') properly
+
+14 February 2017
+Version 9.06 Modified by Alan Prothero
+FF Calendar now re-downloaded after every News Event to pickup changes/updates
+Fixed 5004 Errors when using multiple charts and Saving Calendar
+
+26 January 2017
+Version 9.05 Modified by Alan Prothero
+Fixed Bug due to MT4 Build 1031 not allowing to convert String to Boolean
+
+03 November 2016
+Version 9.04 Modified by Alan Prothero
+Fixed an issue checking Account Names with spaces
+Trade Comment when using MM is now corrected
+
+20 October 2016
+Version 9.03 Modified by Alan Prothero
+Account Name Checker now ignores spaces and case
+Fixed a bug where the News Time was incorrect when using UseBrokerTime=true
+-If your PC Clock is accurate, set UseBrokerTime=false
+-If your PC Clock is not accurate but your Brokers Server clock is fairly accurate, set UseBrokerTime=true
+
+21 September 2016
+Version 9.02 Modified by Alan Prothero
+Fixed a bug when changing ReadSettings from True to False where the Currency Pair for Trading is not updated to the current chart
+Fixed a bug where the Lot calculation displayed 0.00000001 above the correct number of Lots
+Added a check on Max Lots
+Changed default of ReadSettings to False
+
+01 September 2016
+Version 9.01 Modified by Alan Prothero
+Changed Default Setting of DeleteOnShutdown from True to False 
+
+27 August 2016
+Version 9.00 Modified by Alan Prothero
+Dynamically Self Load Trading Parameters
+EA can now trade all currencies from a single chart
+New Settings:-
+1) ReadSettings=true
+2) SettingsFile=AmazingEA-Settings
+Moved Chart Symbol from Name of Log and Tick Files into Files themselves
+
+12 August 2016
+Version 8.06 Modified by Alan Prothero
+Time Stamp used in Log Files now based on UseBrokerTime setting
+License check can now use Account Name instead of Account Number
+
+27 July 2016
+Version 8.05 Modified by Alan Prothero
+Changes and Bug Fixes for Selecting News Events
+1) FFSymbol now overrides the Currency Filter e.g. if FFSymbol=GBP only GBP News is selected to trade
+2) New message 'Unable to retrieve next calendar event ....' now shows if there is no Upcoming News and checks back once per hour
+3) New Events were being selected 15 seconds after the News, which meant there was a possibility New Trades could be taken but not managed properly
+4) EA will only move on to the next News Event when Previous Trades/Orders (with that Magic Number) are finished
+5) The EA has a mode where it can trade every day based on just the time (not Date) but this is now disabled when Auto Trading
+
+19 July 2016
+Version 8.04 Modified by Alan Prothero
+Add New Auto Settings to the Chart so you can see what the following are set to:-
+1) AutoTradeNews
+2) TradeNewsImpact
+3) FilterByCurrency
+4) ExcludeSpeeches
+5) FFSymbol
+
+13-Jul-2016
+Version 8.03 Modified by Alan Prothero
+MT5 Version Now Available - Works just like MT4 Version - Fully compatible with MT5 Hedging
+
+07-Jul-2016
+Version 8.02 Modified by Alan Prothero
+Fixed some bugs preventing use of negative SecBMO and SecBAO
+
+06-Jul-2016
+Version 8.01 Modified by Alan Prothero
+Changed Log and Tick File Names to include Magic Number
+
+12-Jun-2016
+Version 8.00 Modified by Alan Prothero
+!!! Free to use on Demo, Paid For to use on Live !!!
+Licenses are available through the AmazingEA website, please see https://amazingea.wordpress.com/ for details.
+Automatically gets the next News Event from Forex Factory Calendar
+Choose News Impact Level to Trade (Low, Medium, High)
+Exclude Speeches (e.g. 'Fed Yellen Speaks') Events
+Automatic Magic Number Generation not based on Time
+Multiple charts can be traded simultaneously on same event, same pair
+Override Currency Pair for Auto Trading (CNY on AUD Chart)
+New Setting STOCO
+
+11-Nov-2015
+Version 7.00 Modified by Alan Prothero
+Setting Year, Month and Day changes the way the EA operates. See ReadMe file.
+Magic Number now includes Month and Day.
+Deleted 'Expert is disabled because it is not day of expected news' message.
+
+24-Aug-2015
+Version 6.10 Modified by Alan Prothero
+Modified: Tickfile Records Only During Trades
+
+16-Jun-2015
+Version 6.00 Modified by Alan Prothero
+New: Minimum Requirement MT4 Build 600 or MT5
+New: OnTimer Events Capability allowing EA to function without Ticks
+Modified: Minor changes to Logging File Layouts
+
+02-Jun-2015
+Version 5.30 Modified by Alan Prothero
+Fixed: The Stop Loss Reset was running after the SL was already reset.
+
+05-May-2015
+Version 5.20 Modified by Alan Prothero
+Fixed: EA was modifying orders early when PointsGap or SecBAO is 0
+Added: DeleteOnShutdown parameter. If false then orders must be manually removed. 
+
+24-Feb-2015
+Version 5.10 Modified by Alan Prothero
+Money Management Calculation now correctly sets LotSize regardless of Currency or AccountCurrency
+Money Management now only works if you use a Stop Loss
+Added new TickFile Logging to record Bid, Ask and Spread Data
+Open Log Files in Shareable Mode
+Fixed PointsGap Issue in MT5 Version
+
+13-Feb-2015
+Version 5.00 Modified by Alan Prothero
+Published new MT5 Version
+Minor changes to MT4 version designed to make the MT4 and MT5 versions similar so they are easier to maintain
+Improved Logic for PointsGap and SecBAO - Setting either to 0 disables the PointsGap and SecBAO feature
+SlipCheck used to skip the SL/TP Reset when using Break Even and trade was in profit, resulting in reduced TP and Profit due to Slippage
+Updated Error Code Translations to include latest MT4 Errors and added MT5 Errors
+Improved Logfile Writing to latest standards
+Converted Print Commands to Write to Logfile Commands
+Version Number Style has changed from N.N.N to N.NN as per MetaTrader standards
+
+27-Mar-2014
+Version 4.3.0 Modified by Alan Prothero
+Fixed Compile Warnings generated by MT4 updating to Build 625
+The warnings were due to not checking return codes from OrderModify, OrderClose or OrderDelete Functions
+Errors are now displayed in the AmazingEA LogFile, with expanded descriptions
+
+05-Feb-2014
+Version 4.2.0 Modified by Alan Prothero
+Fixed 3 Minor Compile Warnings generated by MT4 updating to Build 600
+Updated Documentation to reflect Build 600 changes
+
+07-Oct-2013
+Version 4.1.0 Modified by Alan Prothero
+New Parameter UseBrokerTime can be used to configure EA to use Local PC clock
+Add Minimum Stop Level to Orders only if necessary
+
+12-Sep-2013
+Version 4.0.0 Modified by Alan Prothero
+Revived SlipCheck and Stop Loss Reset Code and MaxSlippage
+Changed Head Up Display of 'High' to show Bid Price not Ask, 'Buy Order' is High + Spread + Pointsaway
+Ensure ModifyGap can't be set higher than 20
+
+12-Aug-2013
+Version 3.2.2 Modified by Alan Prothero
+Bugfix: Mistake in V3.2.1 BE Code
+Set Minimum StopLevels for Break Even and Trailing
+Write Title and Version Number to LogFile
+
+11-Aug-2013
+Version 3.2.1 Modified by Alan Prothero
+Bugfix: Some OrderModify commands missing Expiration parameter
+Refreshed Error Message List
+
+25-Jul-2013
+Version 3.2.0 Modified by Alan Prothero
+Run Trailing Code before BE Code
+New Parameter PointsGap replaces Hard-Coded 10000 Points for Initial Orders
+Stopped unnecessary Pending Order Modifications
+New Parameter ModifyGap sets the minimum distance in points that price has to change to cause a pending order modification
+Reverted the OCO change from 3.1.0
+Allow Negative SecBPO/SecBMO again
+Changed Risk Code to include Spread - calculation now based on Stop Loss + MaxSpread
+Removed Pipe Symbols from Trade Comments
+
+24-Jul-2013
+Version 3.1.0 Modified by Alan Prothero
+Bugfix: Fixed SL=0 causing Risk Calculation to fail (Div by Zero error)
+Changed Risk Code to *Not* Allow Micro Lots because some brokers don't allow them
+After STWAN logic changed to keep opposite order as hedge unless OCO=true or both pending orders cancelled due to STWAN
+Better Magic Number Definition
+
+28-May-2013
+Version 3.0.0 Modified by Alan Prothero
+New Setting SecBAO
+Default for SecBPO=20 instead of 10
+Removed SlipCheck and Stop Loss Reset Code and MaxSlippage
+Added Settings: NSec and AllowBuys and AllowSells
+Bugfix: EA could open trades between news time and STWAN
+Removed Setting CloseTrades (not needed on MT4 Build 500 or higher)
+Risk Setting now takes into account SL distance
+Added Sleep for 5 seconds when MaxSpread exceeded
+
+27-May-2013
+Version 2.4.0 Modified by Alan Prothero
+Bugfix: EA could open trades between news time and STWAN
+Removed Setting CloseTrades (not needed on MT4 Build 500 or higher)
+Risk Setting now takes into account SL distance
+Added Sleep for 5 seconds when MaxSpread exceeded
+
+10-May-2013
+Version 2.3.0 Modified by Alan Prothero
+Allow Negative SecBPO/SecBMO
+New Setting TrailImmediate
+Minimum Stop Distance now applied to SL and TP as well as Pointsaway
+
+01-May-2013
+Version 2.2.1 Modified by Alan Prothero
+Bugfix selecting orders to be closed in MT4
+
+25-Apr-2013
+Version 2.2.0 Modified by Alan Prothero
+New Setting SlipCheck (True/False)
+Changed some of the default settings
+SL back to 50 instead of 100
+SecBPO=10 instead of 20
+SecBMO=0 instead of 2
+MaxSpread=100
+
+15-Apr-2013
+Version 2.1.0 Modified by Alan Prothero
+New Setting MaxSlippage
+Removed StealthMode
+
+05-Apr-2013
+Version 2.0.2 Modified by Alan Prothero
+Minor Bug: Break Even or Trail now working even if Hard Stop Loss not used
+
+02-Apr-2013
+Version 2.0.1 Modified by Alan Prothero
+Minor Bug: Change Stop Loss Reset Code to work even if not using Break-Even
+
+26-Mar-2013 
+Version 2.0.0 Modified by Alan Prothero
+Fixed Stop Loss Issue from Original AmazingEA 1.1.8 
+Fixed Issue with Stop Loss Reset Code introduced in 1.2.3
+Adjusted Trade Comment to show CTCBN and OCO settings
+New Setting CloseTrades
+New Setting MaxSpread
+New Setting TrailOffset
+New Setting AddSpreadToSL
+New Setting StealthMode
+Renamed TrailingStop setting to TrailPoints
+(See Readme for details of new settings)
+
+01-Mar-2013
+Version 1.2.5 Modified by Alan Prothero
+Setting NYear, NMonth and Nday all to Zero enables EA every day at NHour:NMin
+*WARNING* If you use this and leave the EA running, it will trade at the same time tomorrow *WARNING*
+Brokers do not allow Pending Orders to be entered over weekends.
+
+27-Feb-2013
+Version 1.2.4 Modified by Alan Prothero
+CTCBN now works on any timeframe not just M1. Just pick the timeframe before setting the EA.
+Added an automated minimum distance check and adjustment for Pending Orders
+
+22-Feb-2013
+Version 1.2.3 Modified by Alan Prothero 
+Changed Stop Loss Code to Account for Slippage 
+Setting CTCBN to 0 really disables Candle Check now 
+
+15-Dec-2012
+Version 1.2.2 Modified by Alan Prothero 
+Changed Risk Code to Allow Micro Lots 
+
+03-Dec-2012
+Version 1.2.1 Modified by Alan Prothero 
+Added NMonth and NYear plus Broker Time Clock 
+Renamed Pips to Points Globally 
+Added Break Even Offset 
+
+31-Oct-2012
+Version 1.2.0 Modified by Alan Prothero 
+Added Settings Info in Trade Comments 
+Fixed TP=0 disables Take Profit 
+
+04-Oct-2012
+Version 1.1.9 Modified by Alan Prothero 
+Fixed Break Even Code 
+Added Order Delete Function to DeInit Routine 
+Improved Help Text and Logging 
+
+Version 1.1.8 Modified by branac, added changeable stop loss 
+bbranac@gmail.com 
+
+Version 1.1.7 FiFtHeLeMeNt 
+fifthelement80@gmail.com 

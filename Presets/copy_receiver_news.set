@@ -1,0 +1,103 @@
+s_Server==== Server settings ===
+Channel=news
+s_Trades==== Local settings ===
+ForexSymbolSuffix=
+FuturesSymbol=#
+CustomSymbolMappings=
+CustomPipSizes=
+CustomLotMultipliers=
+s_Signals==== Accept/reject entry signals ===
+IgnoreNewEntrySignals=false
+PermittedSymbols=
+BuySellOnly=0
+IncludeTradingTimes=
+Sunday_TradingTimes=00:00-00:00
+Monday_TradingTimes=00:00-23:59
+Tuesday_TradingTimes=00:00-23:59
+Wednesday_TradingTimes=00:00-23:59
+Thursday_TradingTimes=00:00-23:59
+Friday_TradingTimes=00:00-23:59
+Saturday_TradingTimes=00:00-00:00
+IgnoreOrdersSmallerThanLots=0.0
+IgnoreOrdersLargerThanLots=0.08
+MinSenderLotSize=0.0
+MaxSenderLotSize=0.0
+MaxSpreadPips=5
+s_Exits==== Accept/reject exit signals ===
+IgnoreAllExitSignals=false
+IgnoreExitSignalsForTicketIds=
+s_Slippage==== Slippage management ===
+TradeAllOrdersAtMarket=false
+AllowSlippagePips=2.0
+PlaceLimitOrderIfSlipped=true
+LimitOrderExpirationMinutes=20
+ImmediateCloseOnSlippagePips=0.0
+MarketOrderSlippageParameter=9999
+s_Orders==== Order management ===
+OrderRetries=2
+UseInstantExecution=false
+CloseOrdersImmediatelyIfSLFails=false
+RequireSenderFillWithinMinutes=0
+MagicNumber=1000
+InvertTrades=false
+UseOriginalOrderComments=true
+UseCustomOrderComment=
+PreventPartialExits=false
+IgnorePartialExits=false
+EntryOffsetPips=0.0
+s_Lots==== Lot sizing modes ===
+UseFixedLotSize=0.0
+UseRiskFactor=0.0
+LotSizeMultiplier=1.0
+EquityPerLot=0.0
+BalancePerLot=0.0
+CashRiskFixed=0.0
+CashRiskEquityPercent=0.0
+CashRiskBalancePercent=0.0
+s_LotsSettings==== Lot sizing limits and settings ===
+MaxLots=0.2
+MinLots=0.01
+CentAccount=false
+RoundUpToBrokerMinimum=true
+LotSizingAlwaysRoundDown=true
+s_SL==== S/L and T/P ===
+FixedSLPips=0.0
+FixedTPPips=0.0
+MirrorSLandTPChanges=true
+MaxSLPips=0.0
+MaxCashRiskPerTrade=0.0
+MaxTPPips=0.0
+TrailingStopPips=0.0
+s_Account==== Account management ===
+StopTradingBelowEquity=100.0
+StopTradingAtDrawdownPercent=0.0
+MaxOpenOrders_Total=0
+MaxOpenOrders_FromCopier=0
+MaxTradesPerDay_Total=0
+MaxTradesPerDay_FromCopier=0
+MaxLosingTradesPerDay_Total=0
+MaxLosingTradesPerDay_FromCopier=0
+s_Alerts==== Alerts and notifications ===
+UserDescription=
+BackgroundColour=13434880
+LabelColour=16777215
+NewOrders_AlertOnScreen=false
+NewOrders_AlertByEmail=false
+ClosedOrders_AlertOnScreen=false
+ClosedOrders_AlertByEmail=false
+RejectedOrders_AlertOnScreen=true
+RejectedOrders_AlertByEmail=false
+Problems_AlertByEmail=false
+AlertIfHeartbeatMissingSeconds=0
+NoHeartbeat_AlertOnScreen=true
+NoHeartbeat_AlertByEmail=true
+s_AlertText==== Text for screen/email alerts ===
+OrderOpen_ScreenAlertText=3New order opened: ticket #{TICKET} {BUYSELL} {LOTS} lots {SYMBOL} @ {OPENPRICE}
+OrderOpen_EmailSubjectLine=3New order opened on MT4 a/c {ACC}: ticket #{TICKET} {BUYSELL} {LOTS} lots {SYMBOL} @ {OPENPRICE}
+OrderOpen_EmailBody=3New order opened on MT4 a/c {ACC}: ticket #{TICKET} {BUYSELL} {LOTS} lots {SYMBOL} @ {OPENPRICE}. Stop-loss at {SL} and take-profit at {TP}.
+OrderClose_ScreenAlertText=3Order {CLOSEORDELETE}: ticket #{TICKET} closed at p/l of {CURR} {PNL}
+OrderClose_EmailSubjectLine=3Order {CLOSEORDELETE}: ticket #{TICKET} closed at p/l of {CURR} {PNL}
+OrderClose_EmailBody=3Ticket #{TICKET}: {BUYSELL} {LOTS} lots {SYMBOL}. Opened on {OPENTIME} @ {OPENPRICE}, closed on {CLOSETIME} @ {CLOSEPRICE}.
+NoHeartbeat_ScreenAlertText=3No heartbeat for trade-copy receiver on account {ACC}
+NoHeartbeat_EmailSubjectLine=3No heartbeat for trade-copy receiver on account {ACC}
+NoHeartbeat_EmailBody=3No heartbeat for trade-copy receiver on account {ACC}

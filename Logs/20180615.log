@@ -1,0 +1,27 @@
+0	18:18:53.991	Custom indicator TradeReport (1) XAUUSD,M15: loaded successfully
+0	18:18:54.161	Custom indicator i-Profit Tracker-Fixed(ASM) XAUUSD,M15: loaded successfully
+0	18:18:54.248	Custom indicator FFC(GVmod) XAUUSD,M15: loaded successfully
+0	18:18:54.446	TradeReport (1) XAUUSD,M15: initialized
+0	18:18:55.507	i-Profit Tracker-Fixed(ASM) XAUUSD,M15: initialized
+0	18:18:55.740	FFC(GVmod) XAUUSD,M15: FFC: xml file is out of date
+0	18:18:55.740	FFC(GVmod) XAUUSD,M15: FFC: check for updates...
+0	18:18:55.740	FFC(GVmod) XAUUSD,M15: FFC: delete old file
+0	18:18:59.726	FFC(GVmod) XAUUSD,M15: FFC: FFC-ffcal_week_this.xml file downloaded successfully!
+0	18:18:59.727	FFC(GVmod) XAUUSD,M15: FFC: updated successfully! last modified: 2018.06.15 18:18:57
+0	18:18:59.727	FFC(GVmod) XAUUSD,M15: initialized
+1	18:18:59.747	i-Profit Tracker-Fixed(ASM) XAUUSD,M15: zero divide in 'i-Profit Tracker-Fixed.mq4' (114,24)
+0	18:19:01.885	Custom indicator FFC(GVmod) XAUUSD,M15: loaded successfully
+0	18:19:02.282	Expert ChaosTheory XAUUSD,M15: loaded successfully
+0	18:19:02.283	ChaosTheory XAUUSD,M15 inputs: gen=---- General Inputs ----; PairsToTrade=AUDCAD,AUDCHF,AUDNZD,AUDJPY,AUDUSD,CADCHF,CADJPY,CHFJPY,EURAUD,EURCAD,EURGBP,EURNZD,EURJPY,EURUSD,GBPJPY,GBPUSD,NZDUSD,NZDJPY,USDCAD,USDCHF,USDJPY; EventTimerIntervalSeconds=5; UsePriceChecks=true; PrintFailedChecks=false; BrokerAllowsHedging=true; MinimumMarginPercent=100000; TradeLong=true; TradeShort=true; MaxPairsAllowed=30; PostTradeAttemptWaitSeconds=30; MinTradeDistanceAcrossTimeframesPips=10000; TradeCommentPrefix=AwsomeB&W; sep1=================================================================; pek=---- Peak HiLo inputs ----; UsePeakyOnTradingTimeFrame=false; UsePeakyOnOwnTimeFrame=true; OwnPeakyTimeFrame=1440; NoOfBars=365; sep2=================================================================; ssi=---- SuperSlope inputs ----; UseSuperSlopeOnTradingTimeFrame=false; UseSuperSlopeOnOwnTimeFrame=true; OwnSuperSlopeTimeFrame=1440; SsTradingDifferenceThreshold=1.0; SsTradingLevelCrossValue=2.0; SsTradingSlopeMAPeriod=7; SsTradingSlopeATRPeriod=50; FbFastPrice=0; 
+0	18:19:03.318	FFC(GVmod) XAUUSD,M15: initialized
+0	18:19:20.684	ChaosTheory XAUUSD,M15: initialized
+0	18:20:38.297	TradeReport (1) XAUUSD,M15: uninit reason 9
+0	18:20:38.297	i-Profit Tracker-Fixed(ASM) XAUUSD,M15: uninit reason 9
+0	18:20:38.297	FFC(GVmod) XAUUSD,M15: uninit reason 9
+0	18:20:38.297	ChaosTheory XAUUSD,M15: uninit reason 9
+0	18:20:38.307	Expert ChaosTheory XAUUSD,M15: removed
+0	18:20:38.310	FFC(GVmod) XAUUSD,M15: uninit reason 9
+0	18:20:42.324	Custom indicator TradeReport (1) XAUUSD,M15: removed
+0	18:20:42.327	Custom indicator i-Profit Tracker-Fixed(ASM) XAUUSD,M15: removed
+0	18:20:42.329	Custom indicator FFC(GVmod) XAUUSD,M15: removed
+0	18:20:42.369	Custom indicator FFC(GVmod) XAUUSD,M15: removed

@@ -1,0 +1,102 @@
+AmazingEA FAQ
+
+Please check the following Thread on Forex Factory for News and Updates:-
+http://www.forexfactory.com/showthread.php?t=597450
+
+Can you recommend a Broker to use AmazingEA with?
+This is the Number One FAQ. I'm sorry but I can't recommend a specific broker. Firstly, when I traded just the Spike I tried many brokers but since I moved to more longer term trades for the last 3 years I have remained with one broker who is based in Australia. I want an AUD denominated account to minimize Exchange Rate Risk. Secondly, I care more about Execution than Price, Cost of Trading or Slippage. Thirdly, I am prepared to give you some general advice about choosing a broker.
+1) Try to use one that sends your trade direct to market (STP) and avoid Market Makers. You may do well with a Market Maker initially but they will start to mess up the execution of your trades and may even refuse to let you withdraw. Some Market Makers have clauses in their Terms that require you to keep your trades open for a certain minimum period of time, for example.
+2) Don't deposit your money anywhere you wouldn't be prepared to visit.
+3) Beware of Bonus Schemes, Ultra High Leverage and other weird incentives. Some brokers offer webinars/education. That is OK but any Money Incentive is usually a ploy to get hold of your Desposit.
+
+Can I run it on 4 digit brokers?
+Yes, you can. In fact the EA can even run on WTI, FTSE, DAX etc. The tricky part is setting the parameters correctly. A 4-digit broker requires PointsAway=10 not 100 etc. Presuming you have to test this on a Live Account. The easiest way is to set as many parameters off/disabled as possible. Attach it to a chart ensuring the 'News Time' is a while from now. Watch the High/Low, SL and TP settings in the Comments so that they match what you'd expect. You can always allow it to create the Pending Orders with a large distance to current price. Gradually enable the other settings.
+
+How can I set it up to trade Breakouts?
+Let's say you want to catch London open at 7 am GMT and want to set your Buy Stop/Sell Stop orders as bracket orders around the 6 hr range before London open. Assuming the brokers times are GMT. If the orders are not triggered within 1 hour delete them. The items below must be set, the others can be whatever you prefer. Assuming you are using a H1 chart.....
+
+PointsAway=0
+PointsGap=0
+ModifyGap=0
+NYear=0
+NMonth=0
+NDay=0
+NHour=7
+NMin=0
+NSec=0
+CTCBN=6
+SecBPO=10
+SecBAO=10
+SecBMO=0
+STWAN=3600
+
+How do I avoid being Stopped Out?
+AmazingEA has a feature 'AddSpreadToSL' which alters the SL according to fluctuating Spread. However, once the Pending Orders are created, with a certain LotSize, this can increase the maximum Risk if the trade stops out. With an SL of 10 pips, a spread spike of between 10 and 20 pips can easily stop the trade out. Using the MaxSpread feature can help but this only works up-to the point the trade goes 'Live'. MaxSpread is factored into the Risk when using Money Management.
+The sensible way to avoid a premature stop-out is to use a much wider SL. Personally, I use 30 pips on Majors and 50 pips on Crosses. The first minute after a News Trade goes live is the crucial time. I leave my trades alone during that time and adjust my SL afterwards manually.
+
+How do I avoid Slippage?
+You can't avoid it altogether. An EA that uses Pending Orders can be programmed to set a Maximum Slippage value, as there is a Parameter in the OrderSend command. However the MT4 server ignores the setting anyway, so this effort is useless. Instead, it is important to consider whether the market is extremely one sided at the moment. If the currency pair (say GBPUSD ) has been trending up strongly and many traders have an inkling that GBP Retail Sales will beat expectations, then you will likely suffer 20 pips of slippage on a Long GBPUSD trade. In this case, you are unlikely to lose though as the Market will move up swiftly, but you still shouldn't tighten your SL early as you will be more likely to get stopped out on any retrace. However, if the figure was bad (against expectations) and you end up short GBPUSD then you may even get positive slippage as there may be Buy Orders just below the Market. Another way around the slippage problem is to trade lesser used pairs. For example, on NFP most traders use USDJPY or EURUSD. I found that GBPUSD and AUDUSD were better pairs to use.
+
+Can AmazingEA be upgraded to ......?
+I often get asked to incorporate all kinds of new features, from 'Stealth Orders' to setting TP according to Fibonacci Extensions to pre-loading News Events and trading them automatically. Most EAs end up over-engineered and the performance degrades and they become impossible to maintain.
+
+What about BackTesting?
+Others have managed to BackTest the EA, although I don't see the point. Back Tests use Candle Close Prices and an estimate of the Spread that is applied evenly throughout the Test. In real life, the spread is variable, orders will suffer some slippage and there will be volatility in prices from tick to tick. If you want to see what happens and refine the settings you are comfortable with then use a Demo account, but treat the 'Virtual' money as if it was 'Real'. E.g. if you will be trading a $1000 account don't setup a Demo with $100,000 in it. Trade with low risk (<1% per trade) and ensure that you use Stops etc.
+
+Can I run AmazingEA on multiple charts at the same time?
+The EA has been upgraded and can now trade twice for the same exact news time on two charts with the same currency pair loaded on both charts.
+However, I would be careful using too many copies of AmazingEA as the MT4 Terminal will slow down. Each currency pair would be an additional burden on the system. The EA runs almost 300-500 of it's 1000 lines of code for every price change received. So you can see that running 10 charts * 5 price changes per second * 500 lines of code means trying to run 25,000 lines of code per second, which is too much for the average PC and Internet connection.
+
+AmazingEA Troubleshooter
+
+In Tools, Options, Expert Advisors, make sure you have checked 'Enable Expert Advisors', 'Allow Live Trading' and 'Allow DLL Imports' enabled.
+
+Drop AmazingEA onto a chart. You should see 'AmazingEA' in the top right hand corner of the chart with a Smiley Face next to it.
+
+Click on the chart and press F7, or right-click on the chart and choose Expert Advisers, Properties.
+
+Setup the various parameters for the trade. For 4-digit brokers reduce the defaults for PointsAway, PointsGap, ModifyGap, SL, TP, BEPoints, TrailPoints by a factor of 10.
+
+In the top left corner of the chart there is a comment entitled 'Amazing Forex System Expert Advisor'
+Near there, you can view various parameters and also compare the News Time with the Current Time.
+
+The NYear, NMonth, NDay, NHour, NMin, NSec parameters need to correspond to your Brokers time not your PC time, unless UseBrokerTime is set to false. If you set a date, you need to set all three date parameters NYear, NMonth and NDay. If you don't set the date, be aware that the EA will trade every day at the relevant time set by NHour, NMin and NSec. Also, if you don't set the date, any pending orders or trades will not be managed when the time crosses over midnight.
+
+There is a hierarchy for SecBPO, SecBAO and SecBMO. SecBPO has to be greater or equal to SecBAO which has to be greater than SecBMO.
+
+When the Broker Time nearly coincides with the news time, the EA will place Pending Orders. SecBPO is how many seconds before the News that the orders are placed.
+If the pending orders are not placed, it is possible that 'Allow Live Trading' is not checked.
+
+If Only Long or Only Short orders are placed, then check the Common section of the EA Properties and ensure that it is allowed to open both 'Long & Short' positions.
+
+AmazingEA Installation
+
+From Build 600 onwards, within MT4 you choose 'File, Open Data Directory'. Windows Explorer will open with the current directory set to where all your MT4 data directories and logfiles are. In these instructions, I am going to refer to this directory as <MT4>.
+
+The first time you run Build 600, it copies the contents of the <MT4>\experts directory into <MT4>\MQL4 sub-directory. After that the 'experts' directory isn't used and can be deleted, but the MQL4 one is used instead. The Data directories that were under the Program Files area where you installed MT4 are no longer used at all.
+
+To install the EA, copy the AmazingEA.ex4 file into the <MT4>\MQL4\Experts folder.
+
+Logfiles
+Altogether there are 4 LogFiles and I really need *ALL* of them to diagnose issues properly:-
+
+Checking the AmazingEA Logfiles
+
+From Build 600 onwards, within MT4 you choose 'File, Open Data Directory'. Windows Explorer will open with the current directory set to where all your MT4 data directories and logfiles are. In these instructions, I am going to refer to this directory as <MT4>. You will find the following 4 files, with detailed explanations what took place while the EA was running.
+
+<MT4>\MQL4\Files\AmazingEA-Log-YYYY-MM-DD.log
+The standard log-file name is AmazingEA followed by the Date, so it will be called 'AmazingEA-Log-2015-02-24.log'. For Version 8.01 onwards, the Magic Number is appended to the file name.
+
+<MT4>\MQL4\Files\AmazingEA-Ticks-YYYY-MM-DD.csv
+A TickFile called 'AmazingEA-Ticks-2015-02-24.csv' will also be created containing Currency Pair, Bid and Ask Prices and Spread Data. The data is only recorded from 60 seconds prior to SecBPO upto 60 seconds after STWAN. So if SecBPO=30 and STWAN is 10, there will be 2 minutes and 40 seconds worth of Price Data recorded.
+
+Checking the MetaTrader Logfiles
+There are 2 other logfiles named YYYYMMDD.log where YYYYMMDD is the current date e.g. 20130507.log.
+
+<MT4>\MQL4\Logs\YYYYMMDD.log
+This file describes what all the EAs are doing on the MetaTrader terminal including the EA settings and when they were started up/ shutdown etc.
+
+<MT4>\logs\YYYYMMDD.log
+This file describes every trade that happens on the MetaTrader terminal. If you want to hide your broker details, then edit this file and remove any reference to the Broker Name. The other logs won't reveal it.
+
+The best way to provide these Log files is to zip them into a zipfile and upload them to the thread.

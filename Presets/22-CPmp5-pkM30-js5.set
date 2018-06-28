@@ -1,0 +1,172 @@
+cau=---- Chart automation ----
+AutomateChartOpeningAndClosing=false
+MinimiseChartsAfterOpening=false
+ReservedPair=XAUUSD
+TemplateName=CP M5
+s1=================================================================
+oad=---- Other stuff ----
+PairsToTrade=AUDCAD,AUDCHF,AUDNZD,AUDJPY,AUDUSD,CADCHF,CADJPY,CHFJPY,EURAUD,EURCAD,EURCHF,EURGBP,EURNZD,EURJPY,EURUSD,GBPCHF,GBPJPY,GBPUSD,NZDUSD,NZDJPY,USDCAD,USDCHF,USDJPY
+TradingTimeFrame=5
+EventTimerIntervalSeconds=60
+ChartCloseTimerMultiple=15
+ndt=================================================================
+orig=---- For non-directional trading ----
+hgi=-- HGI Inputs --
+HgiTimeFrame=5
+CloseOnLargeArrows=false
+CloseOnBlueWavy=false
+OnlyCloseWinningTrades=true
+sep1a=================================================================
+sfs=----SafetyFeature----
+MinMinutesBetweenTrades=0
+ads1=================================================================
+DirectionalTrading=---- Directional trade filters ----
+thgi=-- HGI --
+UseHgiTrendFilter=true
+HgiTradeFilterTimeFrame=240
+TradeTrendArrows=true
+TradeBlueWavyLines=true
+HgiCloseOnOppositeSignal=true
+HgiCloseOnYellowWavy=false
+asep1=----
+ssl=-- Super Slope --
+UseSuperSlope=true
+SsTimeFrame=1440
+SsTradingMaxBars=0
+SsTradingAutoTimeFrame=true
+SsTradingDifferenceThreshold=0.0
+SsTradingLevelCrossValue=2.0
+SsTradingSlopeMAPeriod=5
+SsTradingSlopeATRPeriod=50
+SsCloseTradesOnColourChange=true
+asep2=----
+mai=---- Moving average ----
+UseBobMovingAverage=false
+MaTimeFrame=240
+MaPeriod=240
+MaMethod=1
+MaAppliedPrice=0
+MaCloseTradesOnTrendChange=true
+asep3=----
+pea=-- Peaky --
+UsePeaky=true
+PeakyTimeFrame=30
+NoOfBarsOnChart=1682
+PeakyCloseTradesOnDirectionChange=true
+tsep1=================================================================
+tsep2=================================================================
+tsep3=================================================================
+aut=---- Using the dashboard as an auto-trader ----
+AutoTradingEnabled=true
+Lot=0.01
+RiskPercent=0.0
+LotsPerDollopOfCash=0.0
+SizeOfDollop=1000.0
+UseBalance=false
+UseEquity=true
+MinDistanceBetweenTradesPips=0
+StopTrading=false
+TradeLong=true
+TradeShort=true
+TakeProfitPips=0
+StopLossPips=0
+MagicNumber=22
+TradeComment=22-CPmp5-pkM30-js5
+IsGlobalPrimeOrECNCriminal=false
+MaxSlippagePips=5
+PostTradeAttemptWaitSeconds=10
+sep2=================================================================
+btp=---- Hedged Basket take profit inputs ----
+HedgedBasketCashTakeProfit=20
+sepb=================================================================
+off=---- Offsetting ----
+UseOffsetting=true
+AllowComplexSingleSidedOffsets=true
+MinOpenTradesToStartOffset=4
+sep2a=================================================================
+ubp=---- Unbalanced positions inputs ----
+PositionIsUnbalancedAt=5
+rec=-- Offsetting for unbalanced positions --
+UseOffsettingForBalanceRecovery=true
+AllowComplexSingleSidedOffsetsRecovery=true
+MinTradesToStartUnbalancedOffset=6
+nco=-- Nuclear option closure --
+UseInstantClosure=false
+UseMarginLevelClosure=false
+ClosureMarginLevel=500
+sep7=================================================================
+trh=----Trading hours----
+tr1=tradingHours is a comma delimited list
+tr1a=of start and stop times.
+tr2=Prefix start with '+', stop with '-'
+tr2a=Use 24H format, local time.
+tr3=Example: '+07.00,-10.30,+14.15,-16.00'
+tr3a=Do not leave spaces
+tr4=Blank input means 24 hour trading.
+tradingHours=
+sep1de=================================================================
+fssmt=---- Inputs applied to individual days ----
+FridayStopTradingHour=14
+FridayCloseAllHour=20
+SaturdayStopTradingHour=24
+SaturdayCloseAllHour=24
+MaxAllowableCashLoss=-20
+TradeSundayCandle=false
+MondayStartHour=8
+sep7b=================================================================
+roll=---- Rollover time ----
+DisableEaDuringRollover=true
+ro1=Use 24H format, SERVER time.
+ro2=Example: '23.55'
+RollOverStarts=23.55
+RollOverEnds=00.15
+sep8=================================================================
+bf=----Trading balance filters----
+UseZeljko=false
+OnlyTradeCurrencyTwice=false
+sep9=================================================================
+pts=----Swap filter----
+CadPairsPositiveOnly=false
+AudPairsPositiveOnly=false
+NzdPairsPositiveOnly=false
+OnlyTradePositiveSwap=false
+sep10=================================================================
+amc=----Available Margin checks----
+sco=Scoobs
+UseScoobsMarginCheck=false
+fk=ForexKiwi
+UseForexKiwi=false
+FkMinimumMarginPercent=1500
+sep13=================================================================
+tmm=----Trade management module----
+BE=Break even settings
+BreakEven=false
+BreakEvenTargetPips=20
+BreakEvenTargetProfit=2
+PartCloseEnabled=false
+PartClosePercent=50.0
+sep14=================================================================
+JSL=Jumping stop loss settings
+JumpingStop=true
+JumpingStopTargetPips=5
+sep15=================================================================
+cts=----Candlestick jumping stop----
+UseCandlestickTrailingStop=false
+CstTimeFrame=0
+CstTrailCandles=1
+TrailMustLockInProfit=true
+sep16=================================================================
+TSL=Trailing stop loss settings
+TrailingStop=false
+TrailingStopTargetPips=20
+s2=================================================================
+chf=---- Chart feedback display ----
+DisplayX=100
+DisplayY=0
+fontSise=8
+RowDistance=1.68
+fontName=Arial
+colour=65535
+UpColor=65280
+DnColor=255
+NoColor=8421504
